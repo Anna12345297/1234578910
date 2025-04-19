@@ -46,10 +46,11 @@ if(hearts==0){
     info.innerHTML="Игра окончена! Вы проиграли!";
     idImg=document.getElementById('pole1_'+steps);
     idImg.src="img/mario_stop.gif";
-    document.removeEventListener();
     clearInterval(interval1);
     clearInterval(interval2);
     clearInterval(interval3);
+    document.removeEventListener();
+
 }
    if(steps>=16){
     steps=16;
@@ -132,10 +133,11 @@ function checkBlock(){ //определяем блок под ногами иг�
                 if (steps!=0 && hearts!=0){
                          pole1_16.src="img/mario_jumping.gif";
                          info.innerHTML="Уровень пройден!"
-                         document.removeEventListener();
-                         clearInterval(interval1);
+                        clearInterval(interval1);
                          clearInterval(interval2);
                          clearInterval(interval3);
+                         document.removeEventListener();
+
                 }
             break;
             case 4: //блок воды - теряет жизнь
